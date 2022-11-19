@@ -6,6 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class TestNextDateFinder{
     @Test
     public void NextDateOfSameMonth(){
+        DateClass dummyDate= new DateClass(23,3,2004);
+        IncrementDay incrementDay= new IncrementDay();
+        DateClass nextDate= incrementDay.NextDay(dummyDate);
+        assertEquals("24/3/2004",nextDate.DateToString());
+    }
+    @Test
+    public void NextDateOfSameMonthinFebruary(){
         DateClass dummyDate= new DateClass(28,2,2004);
         IncrementDay incrementDay= new IncrementDay();
         DateClass nextDate= incrementDay.NextDay(dummyDate);
